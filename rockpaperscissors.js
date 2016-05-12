@@ -22,25 +22,15 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 var getPlayerMove = function(move) {    
-
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
     return move || getInput();
 };
 
 var getComputerMove = function(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
     return move || randomPlay();
 };
 
 var getWinner = function(playerMove,computerMove) {
     var winner;
-    // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
-    // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
-    // The rules of sthe game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     if (playerMove=== computerMove) {
         winner = "tie";
 }
@@ -74,14 +64,14 @@ var getWinner = function(playerMove,computerMove) {
 var playToFive= function() {
     console.log("Let's play Rock, Paper, Scissors... In the Matrix");
         alert("Let's play Rock, Paper, Scissors... In The Matrix.\n\nPress enter to continue");
-        alert("This is your last chance. After this, there is no turning back. \nYou take the blue pill -- the story ends, you wake up in your bed and believe whatever you want to believe. \nYou take the red pill -- you stay in Wonderland and I show you how deep the rabbit hole goes.\n\n- Morpheus")
-        alert("To take the Red Pill, Press Enter. \n\nTo take the Blue Pill, Terminate Your Browser")
-        alert("You are Neo, engaging in an epic rock, paper, scissors battle with Agent Smith to decide the fate of the The Matrix, The Machine World, and Humanity. \n\nThe first player to 5 wins. \n\nThe fate of reality lies in your hands. Are You Ready?" )
+        alert("This is your last chance. After this, there is no turning back. \nYou take the blue pill -- the story ends, you wake up in your bed and believe whatever you want to believe. \nYou take the red pill -- you stay in Wonderland and I show you how deep the rabbit hole goes.\n\n- Morpheus");
+        alert("To take the Red Pill, Press Enter. \n\nTo take the Blue Pill, Terminate Your Browser");
+        alert("You are Neo, engaging in an epic rock, paper, scissors battle with Agent Smith to decide the fate of the The Matrix, The Machine World, and Humanity. \n\nThe first player to 5 wins. \n\nThe fate of reality lies in your hands. Are You Ready?" );
+    
     var playerWins = 0;
     var computerWins = 0;
-    // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-        while (playerWins < 5 && computerWins <5){
         
+    while (playerWins < 5 && computerWins <5){
         var playerMove = getPlayerMove();
         var computerMove = getComputerMove();
         var winner = getWinner(playerMove, computerMove);
@@ -110,7 +100,7 @@ var playToFive= function() {
             if (playerWins===5) {
                 console.log ("After 5 hard fought victories, Neo successfully rebooted the Matrix... All is right with the world.");
                     alert ("After 5 hard fought victories, Neo defeated Agent Smith, successfully rebooting the Matrix... All is right with the world.");
-                    alert ("Everything that has a beginning, has an end Neo. \n\n-The Oracle")
+                    alert ("Everything that has a beginning, has an end Neo. \n\n-The Oracle");
     }
             else if(computerWins ===5)  {
                 console.log ("I killed you, Mr. Anderson. I watched you die... with a certain satisfaction, I might add.");
