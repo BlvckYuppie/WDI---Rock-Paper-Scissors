@@ -42,20 +42,20 @@ function getWinner(playerMove,computerMove) {
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     /* YOUR CODE HERE */
-    if (playerMove === "rock" && computerMove === "rock" || playerMove === "scissors" && computerMove === "scissors" ||playerMove === "paper" && computerMove === "paper" ||) { 
-        return "tie";
-    } else if (playerMove === "rock" && computerMove === "scissors") {
-        return "player";
-    } else if (playerMove === "scissors" && computerMove === "rock") {
-        return "computer" ;
-    } else if (playerMove === "scissors" && computerMove === "paper") {
-        return "player"; 
-    } else if (playerMove === "paper" && computerMove === "scissors") {
-        return "computer"; 
+    if (playerMove === "rock" && computerMove === "rock" || playerMove === "scissors" && computerMove === "scissors" || playerMove === "paper" && computerMove === "paper") { 
+        winner = "tie";
+    } else if (playerMove === "rock" && computerMove === "scissors"){
+        winner = "player";
+    } else if (playerMove === "scissors" && computerMove === "rock"){
+        winner = "computer" ;
+    } else if (playerMove === "scissors" && computerMove === "paper"){
+        winner = "player"; 
+    } else if (playerMove === "paper" && computerMove === "scissors"){
+        winner = "computer"; 
     } else if (playerMove === "paper" && computerMove === "rock") {
-        return "player"; 
+        winner = "player"; 
     } else if (playerMove === "rock" && computerMove === "paper") {
-        return "computer"; 
+        winner = "computer"; 
     }   
         return winner;
 }
@@ -64,16 +64,20 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
-    While ( playerWins <= 5 || computerWins <= 5) {
+    var winner = getWinner
+    
+    while ((playerWins <= 5) && (computerWins <= 5)) {
+    
     if (winner === "player") {
         playerWins += 1; computerWins += 0;
-    } else if (winner === "computer") {
-        computerWins += 1: playerWins += 0;
-    }
-    { else (winner === "tie") }
+    } 
+    else if (winner === "computer") {
+        computerWins += 1; playerWins += 0;
+    } 
+    else (winner === "tie") {
         computerWins += 0; playerWins += 0;
     }
-
+}
 
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
